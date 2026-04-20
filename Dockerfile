@@ -4,6 +4,8 @@ WORKDIR /app
 
 # Install system dependencies (from packages.txt or common defaults for OpenCV/EasyOCR)
 RUN apt-get update && apt-get install -y \
+    build-essential \
+    python3-dev \
     libgl1 \
     libglib2.0-0 \
     && rm -rf /var/lib/apt/lists/*
